@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+:root {
+    --main-color: #000000;
+    --main-color-light: #5767aa;
+    --secondary-color:  #2aabc1;
+    --text-color:  #eee;
+
+}
+
+header {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    height: 100px;
+    padding: 0 50px;
+    background-color: transparent;
+    color: var(--text-color);
+
+}
+header .logo {
+    flex: 1;
+    display: flex;
+    
+}
+nav a {
+    margin: 0 2rem;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: var(--secondary-color);
+    
+}
+
+header .nav-btn {
+    padding: 10px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--text-color);
+    visibility: hidden;
+    opacity: 0;
+    font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 768px){
+    header .nav-btn{
+        visibility: visible;
+        opacity: 1;
+    }
+
+    header nav{
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 1.5rem;
+        background-color: var(--main-color);
+        transition: 1s;
+        transform: translateY(-100vh);
+    }
+
+    header .responsive-nav{
+        transform: none;
+    }
+
+    nav .nav-close-btn{
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+
+    }
+
+    nav a{
+        font-size: 1.2rem;
+    }
+}
