@@ -13,7 +13,6 @@
     --main-color-light: #5767aa;
     --secondary-color:  #2aabc1;
     --text-color:  #eee;
-
 }
 
 header {
@@ -27,11 +26,13 @@ header {
     color: var(--text-color);
 
 }
+
 header .logo {
     flex: 1;
     display: flex;
     
 }
+
 nav a {
     margin: 0 2rem;
     color: var(--text-color);
